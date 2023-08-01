@@ -1,0 +1,523 @@
+
+
+.navbar{
+    background-color:teal;
+    width:101.2%;
+    height: 45px;
+    position: relative;
+    top:-9px;
+    left: -8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+
+   
+}
+
+.logo{
+    background-image: url('Untitled design.png');
+    width: 117px;
+    height: 50px;
+    color: black;
+    border-radius: 2%;
+}
+.logo:hover{
+    border-color:white;
+    border-style: solid;
+    cursor: pointer;
+    border-width: 1.5px;
+}
+
+body{
+    /* background-image:url('stockgraph2.jpg'); */
+    background-color: black;
+    background-size: cover;
+    /* display: none; */
+}
+
+.lists{
+  display: flex;
+  flex-direction:row;
+  
+}
+
+.lists a{
+    font-size: 20px;
+    margin-left: 1rem;
+}
+
+.lists a:hover{
+    text-decoration: overline;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.search{
+    margin-left: 1rem;
+    
+}
+.search input[type="text"]{
+    height: 30px;
+    width: 20rem;
+    border-radius: .5rem;
+    color:black;
+    
+}
+
+.search button[type="submit"] {
+    height: 28px;
+    border-radius: .5rem;
+    background-color: black;
+    color: white;
+}
+
+.search button[type="submit"]:hover{
+    cursor: pointer;
+    background-color: green;
+}
+
+#infobox{
+    border-style: solid;
+    margin-left: 1rem;
+    height: 36rem;
+    width: 27rem;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: teal;
+    background-color:white;
+    background-image: url('bb.avif');
+    background-size: cover;
+    color: black;
+    
+    font-size: 15px;
+    display:none;
+}
+
+.secondNav{
+    background-color: black;
+    width:100%;
+    height: 45px;
+    position: relative;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+
+}
+#BuyPrice{
+    /* margin-right: 10rem; */
+    color: black;
+}
+#hitBuy{
+    /* margin-right: 10rem; */
+    color: black;
+    cursor: pointer;
+}
+
+.buyBar{
+    margin-right: 1rem;
+    align-items: end;
+}
+
+#sellPrice{
+    color: black;
+}
+
+#hitSell{
+    cursor: pointer;
+    color: black;
+}
+
+.buyBar input[type="number"]{
+    height: 20px;
+}
+.sellBar input[type="number"]{
+    height: 20px;
+}
+
+.secondNav button[type="submit"]:hover{
+    cursor: pointer;
+    background-color: crimson;
+    
+}
+
+.b{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 20px;
+}
+
+
+
+#infobox p{
+    margin-left: 1.3rem;
+    
+}
+
+#stockname{
+   font-size: 33px;
+   text-decoration: underline;
+   font-weight: 1000;
+}
+
+#infobox span{
+    font-size: 19px;
+}
+
+.dropdownMenu{
+     margin-left: 1.2rem;
+}
+.boptions{
+    font-weight: bold;
+}
+
+.peer{
+    padding: 1rem;
+}
+
+#infotext{
+    background-color: #ffffffe6;
+    width: 15rem;
+    height: fit-content;
+    /* height: 15px; */
+    display:none;
+    
+    margin-left: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-weight: 500;
+}
+#infobtn{
+    display: flex;
+    height: 17px;
+}
+
+#infobtn:hover{
+    cursor: pointer;
+    color: crimson;
+}
+
+#infobtn:hover#infotext {
+    display:none;
+}
+
+.infoboxhead{
+    display: flex;
+    align-items: baseline;
+}
+
+#intro{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: cursive;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    font-size: 3rem;
+    cursor: pointer;
+    /* padding: 10rem; */
+}
+
+#removeclass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+#intro::after{
+    content:'';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: teal;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+.uplogo{
+    background-image: url('Untitled design.png');
+    background-color: red;
+    width: 214px;
+    height: 100px;
+    background-size: cover;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px green;
+    margin-bottom: 2rem;
+    display: none;
+}
+#intro:hover::after{
+transform:scale(1);
+cursor: pointer;
+}
+#mailsection{
+  display:none;
+  margin: auto;
+  justify-content:center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#email{
+  height: 20px;
+  width: 20rem;
+}
+#emailbuy{
+  height: 20px;
+  width: 20rem;
+}
+
+#submitmail:hover{
+   cursor: pointer;
+   background-color: black;
+   color: white;
+}
+.earn {
+    color: green;
+    display: inline;
+  }
+  
+  /* Define the styles for the 'pay' class */
+  .pay {
+    color: red;
+    display: inline;
+  }
+
+  #getstartedbtn{
+    border-radius: 4px;
+     background-color:black; 
+     color: white;
+     cursor: pointer;
+     height: 3rem;
+     width: 15rem;
+      font-size: 35px; 
+      box-shadow: 2px 2px greenyellow;
+  }
+  .scroll{
+    background-color:none; 
+    height: 550px;
+     overflow-y: auto;
+      position: fixed; 
+      left: 56rem;
+      color: white; 
+      font-size: 20px;
+      border-style: ridge;
+      border-width: 1.5px;
+       padding-left: 3rem; 
+       text-decoration:aqua;
+       margin-top: 1rem;
+  }
+  .main{
+    display: none; 
+    flex-direction: row;
+  }
+
+  #getstartedbtn:hover{
+    color: crimson;
+    box-shadow: 10px 5px yellowgreen;
+  }
+
+  #graphbox{
+    background-color: #32cd3f;
+    height:450px;
+    width: 450px;
+    position: relative;
+    left: 20%;
+    margin-top: 6rem;
+  }
+
+  .scroll a{
+    color: white;
+    text-decoration: none;
+  }
+  #price2{
+    margin-right: 2rem;
+  }
+  #price3{
+    margin-right: 2rem;
+  }
+  #price4{
+    margin-right: 2rem;
+  }
+  #mprice1{
+    margin-right: 2rem;
+  }
+
+  #chartbtn{
+    width: 27rem; 
+    margin-left: 1rem; 
+    height: 2.5rem; 
+    font-size: 23px; 
+    background-color:black;
+    color: white;
+    display: none;
+  }
+
+  #chartbtn:hover{
+    cursor: pointer;
+    color:crimson;
+  }
+
+  @media (min-width: 1000px) and (max-width: 1135px){
+    #peer5{
+        display: none;
+    }
+    #price5{
+        display: none;
+    }
+    #mprice1{
+      margin-right: 0rem;  
+    }
+    #price2{
+        margin-right: 0rem;  
+      }
+      #price3{
+        margin-right: 0rem;  
+      }
+      #price4{
+        margin-right: 0rem;  
+      }
+      
+      .secondNav{
+        justify-content: space-evenly;
+      }
+      .sellBar{
+        width: 206px;
+      }
+
+      .lists a{
+        font-size: 15px;
+      }
+      .search input[type="text"]{
+        width:15rem;
+      }
+      .navbar{
+        justify-content: space-evenly;
+      }
+      #infobox{
+        margin-left: 0px;
+        width: 24rem;
+        height: 30rem;
+      }
+      #stockname{
+        font-size: 25px;
+      }
+      .b{
+        font-size: 20px;
+        line-height: 16px;
+      }
+      #chartbtn{
+        width: 24rem;
+        margin-left: 0rem;
+        height: 2.5rem;
+      }
+      .scroll{
+        height: 509px;
+        left: 37rem;
+        font-size: 17px;
+      }
+      .buyBar{
+        margin-right: 0rem;
+      }
+  }
+
+  @media (min-width: 750px) and (max-width: 999px){
+    .uplogo{
+        display: block;
+    }
+    .navbar .logo{
+        display: none;
+    }
+    .lists a{
+        font-size: 15px;
+    }
+    .dropdownMenu{
+        margin-left: 1rem;
+    }
+    #chooseindex{
+        width: 110px;
+    }
+    .search input[type="text"]{
+        width: 12rem;
+    }
+    .navbar{
+        justify-content: space-evenly;
+    }
+    #peer5{
+        display: none;
+    }
+    #price5{
+        display: none;
+    }
+    #peer4{
+        display: none;
+    }
+    #price4{
+        display: none;
+    }
+
+    #mprice1{
+        margin-right: 0rem;  
+      }
+      #price2{
+          margin-right: 0rem;  
+        }
+        #price3{
+          margin-right: 0rem;  
+        }
+        #price4{
+          margin-right: 0rem;  
+        }
+
+        .buyBar{
+            margin-right: 0rem;
+            width: 200px;
+        }
+        #peers{
+            font-size: 12px;
+        }
+
+        .buyBar input[type="number"]{
+            width: 157px;
+        }
+        #infotext{
+            position: absolute;
+        }
+
+        #infobox{
+            margin-left: 0rem;
+            height: 25rem;
+            width: 20rem;
+            margin-top: 1.2rem;
+        }
+        #stockname{
+            font-size: 20px;
+        }
+        .b{
+            font-size: 19px;
+            line-height: 11px;
+        }
+        .main{
+            flex-direction: column;
+        }
+        .scroll{
+            position:inherit;
+            height: 513px;
+            font-size: 18px;
+            margin: auto;
+            width: 25rem;
+        }
+        #chartbtn{
+             margin-bottom: 1rem;
+             width: 20rem;
+             margin-left: 0rem;
+        }
+
+
+
+  }

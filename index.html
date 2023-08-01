@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("Gc3EskyzZb7_umLEd");
+   })();
+</script>
+</head>
+
+<body id="body">
+
+    <header style="display:none;" id="header">
+        <!-- block -->
+        <div class="uplogo"></div>
+        <div class="navbar">
+            <div class="logo"></div>
+
+
+            <div class="lists">
+
+                <a>Element1</a>
+                <a>Element2</a>
+                <a>Element3</a>
+                <a>Element4</a>
+                <a>Element5</a>
+
+            </div>
+            <div class="dropdownMenu">
+
+                <select style="height: 25px;" id="chooseindex">
+                    <option disabled selected value="">Select Index</option>
+                    <option value="option1" class="boptions">NIFTY 50</option>
+                    <option value="option2" class="boptions">NIFTY 100</option>
+                    <option value="option3" class="boptions">NIFTY IT</option>
+                    <option value="option4" class="boptions">NIFTY BANK</option>
+                    <option value="option5" class="boptions">NIFTY AUTO</option>
+                    <option value="option6" class="boptions">NIFTY FMCG</option>
+                    <option value="option7" class="boptions">NIFTY PHARMA</option>
+                    <option value="option8" class="boptions">NIFTY ENERGY</option>
+                    <option value="option9" class="boptions">NIFTY METAL</option>
+                    <option value="option10" class="boptions">NIFTY MEDIA</option>
+                    <option value="option11" class="boptions">NIFTY INFRA</option>
+                    <option value="option12" class="boptions">NIFTY PSU BANK</option>
+                    <option value="option13" class="boptions">NIFTY PVT BANK</option>
+                    <option value="option14" class="boptions">NIFTY FIN SERVICE</option>
+                    <option value="option15" class="boptions">NIFTY FINSRV25 50</option>
+                    <option value="option16" class="boptions">NIFTY NEXT 50</option>
+                    <option value="option17" class="boptions">NIFTY 200</option>
+                    <option value="option18" class="boptions">NIFTY 500</option>
+
+                    <option value="option19" class="boptions">NIFTY MIDCAP 50</option>
+                    <option value="option20" class="boptions">NIFTY MIDCAP100</option>
+                    <option value="option21" class="boptions">NIFTY MIDCAP 150</option>
+                    <option value="option22" class="boptions">NIFTY SMALLCAP 50</option>
+                    <option value="option23" class="boptions">NIFTY SMALLCAP 100</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="search">
+                <input type="text" name="query" placeholder="Search Stock" id="searchstock">
+                <button type="submit" id="search">Analyse</button>
+            </div>
+
+        </div>
+
+        <audio id="myAudio">
+            <source src="16896613557074orws5p9-voicemaker.in-speech.mp3" type="audio/mpeg">
+            <!-- Your browser does not support the audio element. -->
+        </audio>
+
+        <audio id="myAudio2">
+            <source src="1690519411802jfygqht3-voicemaker.in-speech.mp3" type="audio/mpeg">
+            <!-- Your browser does not support the audio element. -->
+        </audio>
+
+        <div class="secondNav">
+            <div class="buyBar">
+                <input type="number" name="query" placeholder="Buying price" id="BuyPrice">
+                <button type="submit" id="hitBuy">Hit</button>
+            </div>
+
+            <div id="peers" style="display: flex; color: white;">
+                <p class="peer" id="peer1" style="cursor: pointer;" onclick="dragToSearch()">
+                <p id="mprice1" style=" color: red ; cursor: pointer;"></p>
+                </p>
+                <p class="peer" id="peer2" style="cursor: pointer;" onclick="dragToSearch2()">
+                <p id="price2" style=" color: red; cursor: pointer;"></p>
+                </p>
+                <p class="peer" id="peer3" style="cursor: pointer;" onclick="dragToSearch3()">
+                <p id="price3" style="color: red; cursor: pointer;"></p>
+                </p>
+                <p class="peer" id="peer4" style="cursor: pointer;" onclick="dragToSearch4()">
+                <p id="price4" style=" color: red; cursor: pointer;"></p>
+                </p>
+                <p class="peer" id="peer5" style="cursor: pointer;" onclick="dragToSearch5()">
+                <p id="price5" style="color: red; cursor: pointer;"></p>
+                </p>
+                <!-- <p class="peer" id="peer6">wwwe<p id="price6">231311</p></p> -->
+                <!-- <p class="peer" id="peer7">sad<span id="price7">23123</span></p>
+                <p class="peer" id="peer8">fg<span id="price8">231231</span></p> -->
+
+            </div>
+
+            <!-- <div class="peers2" style="display: flex; color: white;">
+               
+              </div> -->
+
+
+
+            <div class="sellBar">
+                <input type="number" name="query" placeholder="Selling Price" id="sellPrice">
+                <button type="submit" id="hitSell">Hit</button>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="removeclass">
+        <i class="fa-brands fa-wolf-pack-battalion" style="color: white;font-size: 182px;"></i>
+
+        <p style="color: teal; display: inline;" id="intro">
+            One who understands the power of Compounding will <span class="earn">Earn</span> and who won't will <span
+                class="pay">Pay</span> for it !
+        </p>
+        <button type="submit" id="getstartedbtn">Get Started</button>
+
+    </div>
+
+      <div id="mailsection">
+        <i class="fa-regular fa-paper-plane" style="color: green; margin-right: 8px;"></i>
+        <input type="email" name="email" id="email" placeholder="mail_address">
+        <button type="submit" id="submitmail" style="margin-right: 2rem;">Sell Mail</button>
+
+        <i class="fa-regular fa-paper-plane" style="color: Red; margin-right: 8px;"></i>
+        <input type="email" name="email" id="emailbuy" placeholder="mail_address">
+        <button type="submit" id="submitmailbuy"> Buy Mail</button>
+      </div>
+   
+            <div class="main" id="m">
+                <!-- flex -->
+                <div id="stockdetail"
+                    style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <div id="infobox">
+                        <div class="infoicon" id="iconid"
+                            style="display: flex;align-items: end;justify-content: end;margin-top: 5px;margin-right: 5px; height: 23px;">
+                            <i class="fa-solid fa-circle-info" id="infobtn"></i>
+
+
+                        </div>
+                        <div class="infoboxhead" style="background-color:#8080803d;">
+                            <p id="stockname" style="color:#023b68;"> Stock</p> <a href="website" id="web"
+                                style="margin-left: 1rem; cursor: pointer;"></a>
+                        </div>
+
+
+                        <!-- <p >symbol: <span id="symbol"></span> </p> -->
+                        <p class="b">Identifier: <span id="identifier"></span> </p>
+                        <p class="b">Open-Price: <span id="Open-Price"></span> </p>
+                        <p class="b">Day-High: <span id="Day-High"></span> </p>
+                        <p class="b">Day-Low: <span id="Day-Low"></span> </p>
+
+                        <p class="b" style="color: red;">LTP: <span id="LTP" style="color: red;"></span> </p>
+                        <p class="b">Previous-Close: <span id="Previous-Close"></span> </p>
+                        <p class="b">Percent-Change: <span id="Percent-Change"></span> </p>
+                        <p class="b">Year-High: <span id="Year-High"></span> </p>
+
+                        <p class="b">Year-Low: <span id="Year-Low"></span> </p>
+                        <p class="b">1-Year % Change: <span id="1-Year-%-Change"></span> </p>
+
+
+                    </div>
+
+                    <div id="chartdiv">
+                        <button type="submit" id="chartbtn"> <a href="" style="text-decoration: none;" id="fundlink"
+                                target="_blank">Fundamentals & Price Chart</a> </button>
+                    </div>
+                </div>
+
+                <div id="infotext">Here is the detail of the stock. Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Sint, veritatis! </div>
+                <!-- <canvas id="graphbox"></canvas> -->
+
+
+                <div class="scroll">
+                    <p id="scroll1" style="margin-bottom: 0px; font-weight: bold;"> </p>
+                    <a href="" id="scroll1link" style="display: inline; margin-top: 0px;">visit</a>
+
+                    <p id="scroll2" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll2link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll3" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll3link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll4" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll4link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll5" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll5link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll6" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll6link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll7" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll7link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll8" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll8link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll9" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll9link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll10" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll10link" style="display: inline; margin-top: 0px;">visit</a>
+                    <p id="scroll11" style="margin-bottom: 0px; font-weight: bold;"></p>
+                    <a href="" id="scroll11link" style="display: inline; margin-top: 0px;">visit</a>
+
+                </div>
+            </div>
+       
+    <script src="script4.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- "symbol": "TCS",
+"identifier": "TCSEQN",
+"open": 3365,
+"dayHigh": 3524.85,
+"dayLow": 3352,
+"  class="data-field"": 3509,
+"previousClose": 3340.55,
+"change": 168.45,
+"pChange": 5.04,
+"totalTradedVolume": 6306101,
+"totalTradedValue": 21714491244.41,
+"lastUpdateTime": "14-Jul-2023 15:59:37",
+"yearHigh": 3575,
+"yearLow": 2926.1,
+"perChange365d": 9.93,
+"perChange30d": 2.99
+}, -->
